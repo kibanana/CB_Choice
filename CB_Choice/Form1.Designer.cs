@@ -40,6 +40,8 @@
             this.txtList.Name = "txtList";
             this.txtList.Size = new System.Drawing.Size(189, 21);
             this.txtList.TabIndex = 0;
+            this.txtList.TextChanged += new System.EventHandler(this.TxtList_TextChanged);
+            this.txtList.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.TxtList_KeyPress);
             // 
             // cbList
             // 
@@ -49,6 +51,7 @@
             this.cbList.Name = "cbList";
             this.cbList.Size = new System.Drawing.Size(296, 20);
             this.cbList.TabIndex = 1;
+            this.cbList.SelectedIndexChanged += new System.EventHandler(this.CbList_SelectedIndexChanged);
             // 
             // btnAdd
             // 
@@ -58,6 +61,7 @@
             this.btnAdd.TabIndex = 2;
             this.btnAdd.Text = "추가";
             this.btnAdd.UseVisualStyleBackColor = true;
+            this.btnAdd.Click += new System.EventHandler(this.BtnAdd_Click);
             // 
             // lblResult
             // 
@@ -81,6 +85,7 @@
             this.MinimizeBox = false;
             this.Name = "Form1";
             this.Text = "메뉴 선택 추가";
+            this.Load += new System.EventHandler(this.Form1_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 
